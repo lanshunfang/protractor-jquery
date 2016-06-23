@@ -1,0 +1,26 @@
+{
+  "name": "protractor-jquery",
+  "version": "1.0.0",
+  "description": "This is a utility for you to use Angular Protractor in non-angular websites that just uses jQuery",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanshunfang/protractor-jquery.git"
+  },
+  "keywords": [
+    "Protractor",
+    "jQuery",
+    "E2E",
+    "Test",
+    "Angular"
+  ],
+  "author": "Paul Lan<lanshunfang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lanshunfang/protractor-jquery/issues"
+  },
+  "homepage": "https://github.com/lanshunfang/protractor-jquery#readme"
+}
