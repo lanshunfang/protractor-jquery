@@ -48,3 +48,8 @@ The main idea to tweak Protractor for Non-Angular websites, is to rewrite
 browser.waitForAngular
 ```
 Which is how Protractor handle all asynchronised requests. If any jQuery.ajax request is pending, then we wait until it's done.
+
+## Screenshots
+
+![Protractor is running](https://raw.githubusercontent.com/lanshunfang/protractor-jquery/master/test/demo-screenshots/protractor-is-running.png "Protractor is running")
+![Console Output](https://raw.githubusercontent.com/lanshunfang/protractor-jquery/master/test/demo-screenshots/console-output.png "Console Output")
