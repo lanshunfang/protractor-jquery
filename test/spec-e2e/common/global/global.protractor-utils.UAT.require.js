@@ -3,7 +3,6 @@
  **/
 
 var protractor = require('protractor');
-var EC = protractor.ExpectedConditions;
 require('./global.protractor-utils.jasmine.UAT.require');
 
 browser.ignoreSynchronization = true;
@@ -43,19 +42,17 @@ exports.waitForAjax = function () {
         });
 
         window.hasWaitForAjaxRun = true;
-      }
-      ;
+      };
 
       var refectAjaxToDomNode = function () {
 
         if (window.isFirstAjaxInvoked && !window.isCurrentAjaxRunning) {
           cb()
         } else {
-          setTimeout(refectAjaxToDomNode, 300)
+          setTimeout(refectAjaxToDomNode, 300);
         }
       };
-      refectAjaxToDomNode()
-
+      refectAjaxToDomNode();
 
     });
 

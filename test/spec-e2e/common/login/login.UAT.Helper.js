@@ -1,6 +1,6 @@
 var global = require('../global/global.UAT.require');
 
-browser.get(global.baseURL + 'login');
+browser.get(global.baseURL);
 
 $('#email').sendKeys(global.email);
 $('#password').sendKeys(global.password);

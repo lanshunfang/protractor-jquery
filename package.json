@@ -9,7 +9,8 @@
     "e2e": "node test/e2e.js",
     "clean": "rm -rf public/",
     "build": "npm run clean && webpack --config webpack.config.js",
-    "serve": "npm run build && npm start"
+    "serve": "npm run build && npm start",
+    "postinstall": "node test/lib/install.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
     "jQuery",
     "E2E",
     "Test",
-    "Angular"
+    "Angular",
+    "KnockoutJs"
   ],
   "author": "Paul Lan<lanshunfang@gmail.com>",
   "license": "MIT",

@@ -32,6 +32,10 @@ server.use(webpackHotMiddleware(compiler));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
+server.use('/api/tech-list', (req, res) => (
+    res.send(JSON.stringify(["Javascript", "HTML", "CSS", "Bash", "Linux", "Node", "HTML5"]))
+));
+
 server.use('/', (req, res) => (
     res.sendFile(path.join(__dirname, 'app', 'markup', 'protractor-jquery.html'))
 ));

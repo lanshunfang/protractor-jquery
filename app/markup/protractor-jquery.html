@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <title>Google Protractor for jQuery Web</title>
     <script src="/assets/app.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
 
-  <div class="container">
+<div class="container">
     <nav class="navbar navbar-light bg-faded">
-      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
-        &#9776;
-      </button>
-      <div class="collapse navbar-toggleable-xs" id="navbar-header">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <ul class="nav navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header"
+                aria-controls="navbar-header">
+            &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="navbar-header">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
 
-        </ul>
-        <form class="form-inline pull-xs-right">
-          <input class="form-control" type="text" id="global-search" placeholder="Search">
-          <button class="btn btn-success-outline" type="submit">Search</button>
-        </form>
-      </div>
+            </ul>
+            <form class="form-inline pull-xs-right">
+                <input class="form-control" type="text" id="global-search" placeholder="Search">
+                <button class="btn btn-success-outline" type="submit">Search</button>
+            </form>
+        </div>
     </nav> <!-- /navbar -->
 
     <!-- Main component for a primary marketing message or call to action -->
-      <iframe id="protractor-iframe" src="#" width="100%" height="500px"></iframe>
+    <div id="protractor-logined">
+        <div class="card">
+            <img class="card-img-top linkedin-avatar"
+                 src="http://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/04a/291/17ccd27.jpg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Your Avatar</h4>
+                <p class="card-text">Click the link to open LinkedIn Profile of Paul Lan</p>
+                <a href="https://cn.linkedin.com/in/lanshunfang" class="btn btn-primary">LinkedIn</a>
+            </div>
 
-      <div class="jumbotron">
+            <ul class="list-group list-group-flush tech-list">
+                <li class="list-group-item">Protractor</li>
+            </ul>
+
+            <div class="card-block">
+                <a href="#" class="fetch-tech-list btn btn-primary">Fetch Tech List (AJAX)</a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="jumbotron">
         <form class="form-inline" id="protractor-form">
             <div class="form-group">
                 <label class="sr-only" for="email">Email address</label>
@@ -53,8 +74,8 @@
         </form>
     </div>
 
-  </div> <!-- /container -->
+</div> <!-- /container -->
 
-  </body>
+</body>
 
 </html>

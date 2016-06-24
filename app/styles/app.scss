@@ -1,6 +1,10 @@
 // Example of referring to bootstrap variables in your Sass code.
 $icons-color: adjust-hue($brand-success, -20deg);
 
-#protractor-iframe {
+#protractor-logined {
   display: none;
+  text-align: center;
+  .card {
+    padding:50px;
+  }
 }

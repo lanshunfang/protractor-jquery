@@ -13,7 +13,7 @@ exports.config = {
     directConnect: true,
 
     suites: {
-        "protractor-jquery": __dirname + './../spec-e2e/pages/protractor-jquery.E2E.Spec.js'
+        "protractor-jquery": __dirname + './../spec-e2e/pages/home/protractor-jquery.E2E.Spec.js'
     },
 
     // configure multiple browsers to run tests

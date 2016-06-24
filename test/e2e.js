@@ -2,11 +2,20 @@ var ptorCurrentRunningInsts = {}
 var ptorCfgFileDefault = './cfg/protractor-config';
 
 var child_process = require('child_process');
-var path = require('path');
+
+var findBin = require('./lib/find-bin');
 
 var ptorCfgDefault = require(ptorCfgFileDefault).config;
 exports.maxWaitTimeForPtorChildProcess = ptorCfgDefault && ptorCfgDefault.jasmineNodeOpts && ptorCfgDefault.jasmineNodeOpts.defaultTimeoutInterval || 20000;
 
+/**
+ * Get Protractor ready with configure file
+ *
+ * @description return a function to accept test case name
+ *
+ * @param {string} [ptorCfgFile] - the Protractor config file name, defaulted as './cfg/protractor-config'
+ * @returns {Function}
+ */
 exports.protractorRun = function (ptorCfgFile) {
 
     ptorCfgFile = ptorCfgFile || ptorCfgFileDefault;
@@ -28,7 +37,7 @@ exports.protractorRun = function (ptorCfgFile) {
             return runningCProcess
         }
 
-        var childProcess = child_process.spawn(getProtractorBinary('protractor'), argv, {
+        var childProcess = child_process.spawn(findBin.getProtractorBinary('protractor'), argv, {
             stdio: 'inherit'
         });
 
@@ -53,35 +62,29 @@ exports.protractorRun = function (ptorCfgFile) {
 
 };
 
+/**
+ * Update webdriver
+ * @param done
+ * @returns {*}
+ */
 exports.protractorInstall = function (done) {
-    return child_process.spawn(getProtractorBinary('webdriver-manager'), ['update'], {
+    return child_process.spawn(findBin.getProtractorBinary('webdriver-manager'), ['update'], {
         stdio: 'inherit'
     }).once('close', done);
 };
 
 
-var paramCaseName = getArgvOption('caseName');
+var paramCaseName = getArgvOption(0);
+
 paramCaseName = paramCaseName ? '--params.casename=' + paramCaseName : undefined;
 
+/**
+ *
+ */
 exports.protractorRun()(paramCaseName).on('exit', function () {
     console.log('Done of running Protractor jQuery')
 });
 
-exports.protractorRun()();
-
-function getProtractorBinary(binaryName) {
-    var winExt = /^win/.test(process.platform) ? '.cmd' : '';
-    var pkgPath = require.resolve('protractor');
-    var protractorDir = path.resolve(path.join(path.dirname(pkgPath), '..', 'bin'));
-
-    return path.join(protractorDir, '/' + binaryName + winExt);
-}
-
-function getArgvOption(optionName) {
-
-    var optionValue, i = process.argv.indexOf("--" + optionName);
-    if (i > -1) {
-        optionValue = process.argv[i + 1];
-    }
-    return optionValue
+function getArgvOption(optionIndex) {
+    return process.argv[optionIndex+2]
 }
