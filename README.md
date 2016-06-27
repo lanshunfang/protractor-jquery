@@ -1,5 +1,9 @@
 # Protractor E2E Test for Non-Angular Website (jQuery-based)
 
+## YouTube videos
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Zhp6vUWyQ0g" target="_blank"><img src="http://img.youtube.com/vi/Zhp6vUWyQ0g/0.jpg" alt="YouTube Video clip for usage of Protractor for Non-Angular" width="240" height="180" border="10" /></a>
+
 ## Why
 
 Google invented Protractor over WebDriverJs Protocol with crispy designs on real world testing scenarios. It's originally for AngularJS and people like it.
