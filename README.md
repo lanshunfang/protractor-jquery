@@ -1,8 +1,13 @@
 # Protractor E2E Test for Non-Angular Website (jQuery-based)
 
-## YouTube videos
+## Videos
 
+### YouTube
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Zhp6vUWyQ0g" target="_blank"><img src="http://img.youtube.com/vi/Zhp6vUWyQ0g/0.jpg" alt="YouTube Video clip for usage of Protractor for Non-Angular" width="240" height="180" border="10" /></a>
+
+### YouKu (China)
+
+<a href="http://player.youku.com/embed/XMTYyMjI3NTc4OA==" target="_blank"><img src="http://r3.ykimg.com/0542040857708A896A0A4E04E3A87D85" alt="优酷视频 - 使用 Google Protractor 测试非 Angular 页面" width="240" height="180" border="10" /></a>
 
 ## Why
 
